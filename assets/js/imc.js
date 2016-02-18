@@ -145,7 +145,7 @@ var IMCControl = {
   //   $(".step i").html("Qual sua idade?");
   //   $(".pb-slide")[0].className = "pb-slide step" + step;
 
-  window.location.href = "/";
+  window.location.href = "/saude-imc/";
   }
 
 }
