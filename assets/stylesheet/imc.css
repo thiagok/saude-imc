@@ -1,0 +1,257 @@
+* {
+  font-family: 'Lato', 'Open Sans', sans-serif;
+}
+
+html, body {
+  background-color: #4439D7;
+  color: white;
+  margin: 0; padding: 0;
+  width: 100%; height: 100%;
+  text-align: center;
+  font-size: 1em;
+}
+
+#center-content {
+  width: 40%;
+  margin-left: auto;
+  margin-right: auto;
+  transition: 1s;
+  margin-top: 10%;
+
+  -webkit-transition: all 1s ease;
+  -moz-transition: all 1s ease;
+  -o-transition: all 1s ease;
+  -ms-transition: all 1s ease;
+  transition: all 1s ease;
+}
+
+#center-content.move {
+  margin-top: 0;
+}
+
+body.done {
+  align-items: top;
+}
+
+#center-content .imc-title {
+  color: white;
+  text-align: center;
+  margin-bottom: 40px;
+  position: relative;
+}
+
+#center-content .imc-title img {
+  position: absolute;
+  height: 200px;
+  top: 20px;
+  right: -70px;
+  -webkit-transition: all 1s ease;
+  -moz-transition: all 1s ease;
+  -o-transition: all 1s ease;
+  -ms-transition: all 1s ease;
+  transition: all 1s ease;
+}
+#center-content .imc-title img.move {
+  right: 90%;
+}
+
+#center-content .imc-title h1 {
+  padding: 0; margin: 0;
+  line-height: 70px;
+}
+
+#center-content .imc-title b {
+  font-size: 300%;
+}
+
+#center-content .imc-form {
+  overflow: hidden;
+}
+
+#center-content .imc-form label {
+  position: relative;
+  text-align: left;
+}
+
+#center-content .imc-form label span {
+  text-align: left;
+}
+
+#center-content .imc-form input {
+  font-size: 150%;
+  height: 60px;
+  width: 100%;
+  background-color: #3029A1;
+  outline: 0;
+  border: 0;
+  box-sizing: border-box;
+  padding: 10px;
+  padding-right: 80%;
+  margin-top: 10px;
+  color: white;
+  font-family: 'Merriweather Sans', 'Open Sans', sans-serif;
+  text-align: right;
+}
+
+.imc-form button {
+  position: absolute;
+  background: none;
+  border: 0;
+  top: 50px; right: 10px;
+  cursor: pointer;
+  outline: none;
+}
+
+.imc-form button img {
+  height: 20px;
+}
+
+#center-content .imc-form .unit {
+  position: absolute;
+  top: 50px;
+  left: 120px;
+}
+
+.step { display: none; }
+.step i { font-style: normal; }
+
+#step1 {
+  display: block;
+}
+
+.progress-bar {
+  width: 100%;
+  height: 5px;
+  overflow: hidden;
+}
+
+.progress-bar .pb-slide {
+  background-color: #6C61F8;
+
+  transition: width 1s;
+
+
+}
+
+.progress-bar .pb-slide.ok {
+  background-color: #27ae60;
+}
+
+.progress-bar .pb-slide.step1 { width: calc(100%/3*0); }
+.progress-bar .pb-slide.step2 { width: calc(100%/3*1); }
+.progress-bar .pb-slide.step3 { width: calc(100%/3*2); }
+.progress-bar .pb-slide.step4 { width: calc(100%/3*3); }
+
+span.error { color: tomato; padding-left: 10px; }
+
+#full-resultado {
+  display: none;
+  background-color: #3029A1;
+  position: absolute;
+  width: 100%;
+  left: 0;
+  margin-top: -60px;
+  text-align: center;
+  line-height: 60px;
+  font-size: 150%;
+}
+
+
+.center-results {
+  margin-top: 50px;
+}
+
+.center-results button {
+  display: none;
+  padding: 10px 20px;
+  background-color: #00D8FD;
+  color: white;
+  border: none;
+  font-size: 1em;
+  outline: 0;
+  cursor: pointer;
+  clear: both;
+  margin-bottom: 20px;
+}
+
+.center-results button.refazer {
+  background-color: #7ED321;
+}
+
+#tables {
+  display: none;
+  width: 100%;
+  margin-bottom: 100px;
+}
+
+.center-results .box {
+  display: inline-block;
+  text-align: left;
+  font-weight: bold;
+  font-size: 1em;
+  margin-top: 50px;
+  margin-right: 20px;
+}
+
+.center-results .box span {
+  font-weight: normal;
+  font-size: 0.8em;
+}
+
+.center-results table {
+  padding-top: 10px;
+}
+
+.center-results table td {
+  padding: 10px;
+  font-weight: 300;
+  font-size: 12px;
+}
+
+.center-results table thead td {
+  text-transform: uppercase;
+}
+
+.center-results table tr td:first-child {
+  text-align: left;
+  border-right: 1px solid #4439D7;
+}
+
+.center-results table tr:nth-child(odd) {
+  background-color: #302AAB;
+}
+
+.center-results table tr:nth-child(even), .center-results table thead tr {
+ background-color: #201C92 !important;
+}
+
+.center-results table tr.resultado {
+  background-color: orange !important;
+}
+
+.relative {
+  position: relative;
+}
+
+@media (max-width: 640px) {
+  #center-content {
+    width: 90%;
+  }
+  #center-content .imc-title img {
+    height: 100px;
+    top: 120px;
+    right: -10px;
+  }
+}
+
+@media (max-width: 800px) {
+
+}
+
+@media (max-width: 1024px) {
+
+}
+
+@media (max-width: 1280px) {
+
+}

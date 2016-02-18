@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <title>Teste de IMC</title>
+  <link rel="stylesheet" href="assets/stylesheet/imc.css">
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,300,700' rel='stylesheet' type='text/css'>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+  <meta charset="utf-8">
+  <meta name="description" content="Recupere sua saúde, teste seu IMC para descobrir o que precisa ser feito no seu corpo!">
+  <meta name="robots" content="noodp,noydir"/>
+  <link rel="canonical" href="gogole.com.br" />
+
+  <meta property="og:locale" content="pt_BR" />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Calcule seu IMC!" />
+  <meta property="og:description" content="Recupere sua saúde, teste seu IMC para descobrir o que precisa ser feito no seu corpo!" />
+  <meta property="og:url" content="imc.com.br" />
+  <meta property="og:site_name" content="Calcule seu IMC!" />
+  <meta property="og:image" content="http://www.dicasdetreino.com.br/wp-content/uploads/2013/05/formula_imc.jpg" />
+  <meta name="twitter:description" content="Recupere sua saúde, teste seu IMC para descobrir o que precisa ser feito no seu corpo!"/>
+  <meta name="twitter:title" content="Calcule seu IMC!"/>
+  <meta name="twitter:site" content="@imc"/>
+  <meta name="twitter:domain" content="IMC"/>
+
+  <script type="text/javascript" src="assets/js/jquery.min.js"></script>
+  <script type="text/javascript" src="assets/js/jquery.mask.min.js"></script>
+  <script type="text/javascript" src="assets/js/imc.js"></script>
+</head>
+<body>
+
+  <div id="center-content">
+
+    <div class="imc-title">
+      <h1>Calcule o seu <br /> <b>IMC</b></h1>
+      <img src="assets/image/men.png" />
+    </div>
+
+    <form class="imc-form" action="#" autocomplete="off">
+      <div class="relative">
+        <label id="step1" class="step">
+          <span>Qual seu peso?</span> <span class="error"></span>
+          <input type="text" name="peso" id="peso" autocomplete="off" /><div class="unit">kg</div>
+        </label>
+
+        <label id="step2" class="step">
+          <span>Qual sua altura?</span> <span class="error"></span>
+          <input type="text" name="altura" id="altura" /><div class="unit">m</div>
+        </label>
+
+        <label id="step3" class="step">
+          <span><i>Qual sua idade?</i></span> <span class="error"></span>
+          <input type="text" name="idade" id="idade" /><div class="unit">anos</div>
+        </label>
+        <button type="submit"><img src="assets/image/arrow.png" /></button>
+      </div>
+
+      <div id="full-resultado"></div>
+    </form>
+
+    <div class="progress-bar">
+      <div class="pb-slide step1">&nbsp;</div>
+    </div>
+
+  </div>
+
+  <div class="center-results">
+    <button>Confira a tabela de classificação</button>
+    <button class="refazer">Refazer o teste!</button>
+
+    <div id="tables">
+      <div class="box">
+        Crianças e jovens <span>(até 20 anos)</span>
+        <table width="280" border="0" cellpadding="0" cellspacing="0">
+          <thead>
+            <tr>
+              <td>Classificação</td><td width="35%" align="center">IMC</td>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td>Baixo peso</td><td align="center">< 18,5</td></tr>
+            <tr><td>Eutrofia (peso ideal)</td><td align="center">28,5 a 24,9</td></tr>
+            <tr><td>Excesso de peso</td><td align="center">25 a 29,9</td></tr>
+            <tr><td>Obesidade</td><td align="center">> 30</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="box">
+        Adultos <span>(entre 21 e 65 anos)</span>
+        <table width="280" border="0" cellpadding="0" cellspacing="0">
+          <thead>
+            <tr>
+              <td>Classificação</td><td width="35%" align="center">IMC</td>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td>Baixo peso</td><td align="center">< 18,5</td></tr>
+            <tr><td>Eutrofia (peso ideal)</td><td align="center">18,5 a 24,9</td></tr>
+            <tr><td>Pré-obesidade</td><td align="center">25 a 29,9</td></tr>
+            <tr><td>Obesidade, grau I</td><td align="center">30 a 34,9</td></tr>
+            <tr><td>Obesidade, grau II</td><td align="center">35 a 39,9</td></tr>
+            <tr><td>Obesidade mórbida</td><td align="center">>= 40</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="box">
+        Idosos <span>(a partir de 66 anos)</span>
+        <table width="280" border="0" cellpadding="0" cellspacing="0">
+          <thead>
+            <tr>
+              <td>Classificação</td><td width="35%" align="center">IMC</td>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td>Desnutrição</td><td align="center">< 22</td></tr>
+            <tr><td>Risco de desnutrição</td><td align="center">22 a 23,9</td></tr>
+            <tr><td>Eutrofia (peso ideal)</td><td align="center">24 a 26,9</td></tr>
+            <tr><td>Pré obesidade</td><td align="center">27 a 32</td></tr>
+            <tr><td>Obesidade</td><td align="center">> 32</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+    </div>
+
+  </div>
+
+</body>
+</html>
+<script type="text/javascript">
+  $(function() { IMCControl.initialize(); });
+</script>
